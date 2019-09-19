@@ -62,8 +62,7 @@ class TypeMockHelper
 
     private function createSubManager(): SubManagerInterface
     {
-        return new class ($this->testCase, $this->typesToRegister, $this->strictRegisterCheck) implements SubManagerInterface
-        {
+        return new class($this->testCase, $this->typesToRegister, $this->strictRegisterCheck) implements SubManagerInterface {
             /**
              * @var TestCase
              */

@@ -11,7 +11,7 @@ namespace Ixocreate\Test\Schema;
 
 use Ixocreate\Schema\Type\Type;
 use Ixocreate\Schema\Type\TypeInterface;
-use Ixocreate\ServiceManager\Autowire\FactoryResolverInterface;
+use Ixocreate\ServiceManager\Autowire\FactoryResolver\FactoryResolverInterface;
 use Ixocreate\ServiceManager\Exception\ServiceNotFoundException;
 use Ixocreate\ServiceManager\ServiceManagerConfigInterface;
 use Ixocreate\ServiceManager\ServiceManagerSetupInterface;
@@ -116,7 +116,7 @@ class TypeMockHelper
                     ->getMock();
             }
 
-            public function getValidation(): string
+            public static function validation(): string
             {
                 return TypeInterface::class;
             }
@@ -134,7 +134,7 @@ class TypeMockHelper
             /**
              * @return ServiceManagerConfigInterface
              */
-            public function getServiceManagerConfig(): ServiceManagerConfigInterface
+            public function serviceManagerConfig(): ServiceManagerConfigInterface
             {
                 return (new MockBuilder($this->testCase, ServiceManagerConfigInterface::class))
                     ->disableOriginalConstructor()
@@ -147,7 +147,7 @@ class TypeMockHelper
             /**
              * @return ServiceManagerSetupInterface
              */
-            public function getServiceManagerSetup(): ServiceManagerSetupInterface
+            public function serviceManagerSetup(): ServiceManagerSetupInterface
             {
                 return (new MockBuilder($this->testCase, ServiceManagerSetupInterface::class))
                     ->disableOriginalConstructor()
@@ -160,7 +160,7 @@ class TypeMockHelper
             /**
              * @return FactoryResolverInterface
              */
-            public function getFactoryResolver(): FactoryResolverInterface
+            public function factoryResolver(): FactoryResolverInterface
             {
                 return (new MockBuilder($this->testCase, FactoryResolverInterface::class))
                     ->disableOriginalConstructor()
@@ -173,7 +173,7 @@ class TypeMockHelper
             /**
              * @return array
              */
-            public function getServices(): array
+            public function services(): array
             {
                 return [];
             }

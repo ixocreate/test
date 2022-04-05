@@ -12,10 +12,10 @@
         }
     ],
     "require": {
-        "php": "^7.2 || ~8.0.0",
+        "php": "^7.2 || ^8.0",
         "dg/bypass-finals": "^1.3",
-        "phpunit/phpunit": "^8.5",
-        "php-coveralls/php-coveralls": "^2.4"
+        "phpunit/phpunit": "^9.0",
+        "php-coveralls/php-coveralls": "^2.5"
     },
     "require-dev": {
         "ixocreate/coding-standard": "^2.0"
